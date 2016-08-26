@@ -1,5 +1,5 @@
 # production.rb
-set :deploy_to, '/var/www/fatsquash.ru/test'
+set :deploy_to, '/var/www/fatsquash.ru/index'
 set :rails_env, :production
 
 # Настраиваем ssh до сервера
