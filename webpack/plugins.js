@@ -75,4 +75,4 @@ if(NODE_ENV === 'development') {
   ];
 }
 
-export = plugins
+export default plugins
