@@ -1,0 +1,17 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  a {
+    display: inline-block;
+    margin: 10px;
+    color: #fff;
+    &.__active {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

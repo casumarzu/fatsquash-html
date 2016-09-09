@@ -3,12 +3,13 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import DevTools from 'Containers/DevTools'
-import muiCss from 'material-design-lite/src/material-design-lite'
+// import muiCss from 'material-design-lite/src/material-design-lite'
 import {Card} from 'material-ui'
 import { getMuiTheme, MuiThemeProvider } from 'material-ui/styles'
 import { muiStyle } from 'Scripts/config'
 import Header from 'Components/layouts/Header'
 import Footer from 'Components/layouts/Footer'
+import 'Styles/index.scss'
 
 const muiTheme = getMuiTheme(muiStyle)
 
@@ -29,7 +30,7 @@ export default class App extends Component {
             <Card>
               {this.props.children}
             </Card>
-            <Footer/>
+            {/*<Footer/>*/}
           </div>
           {DevToolsNode}
         </div>

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import {paintIsoscelesTriange} from './utils'
 import {
   LinearGradient,
   RadialGradient,
@@ -6,20 +7,26 @@ import {
   svgStyle
 } from './partials'
 
-export default class Circle extends Component {
+const wdt = 120
+const hgt = 120
+const points = paintIsoscelesTriange(120, 120)
+
+export default class Triangle extends Component {
   render() {
     return (
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 120 120"
+        viewBox={`0 0 ${wdt} ${hgt}`}
         style={svgStyle}>
         <defs>
           <RadialGradient />
         </defs>
-        <circle fill="url(#radial-gradient)" cx="60" cy="60" r="20">
+        <polygon
+          fill="url(#radial-gradient)"
+          points={points}>
           <OpacityAnimation />
-        </circle>
+        </polygon>
       </svg>
     )
   }

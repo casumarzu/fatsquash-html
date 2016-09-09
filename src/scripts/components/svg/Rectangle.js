@@ -17,9 +17,14 @@ export default class Circle extends Component {
         <defs>
           <RadialGradient />
         </defs>
-        <circle fill="url(#radial-gradient)" cx="60" cy="60" r="20">
+        <rect
+          fill="url(#radial-gradient)"
+          x="40"
+          y="40"
+          height="40"
+          width="40">
           <OpacityAnimation />
-        </circle>
+        </rect>
       </svg>
     )
   }

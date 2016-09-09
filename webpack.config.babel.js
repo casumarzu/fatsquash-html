@@ -48,7 +48,7 @@ let config = {
 };
 
 if(NODE_ENV === 'development') {
-  config.devtool = 'cheap-module-eval-source-map';
+  config.devtool = '#inline-source-map'
 }
 
 export default config
