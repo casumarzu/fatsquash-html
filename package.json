@@ -4,7 +4,8 @@
   "description": "webpack app",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "npm run test_prod -- --watch",
+    "test_prod": "jest",
     "clean": "rimraf dist",
     "start": "npm run dev",
     "dev": "NODE_ENV=development babel-node devServer",

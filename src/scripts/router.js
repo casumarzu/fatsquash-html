@@ -10,7 +10,7 @@ export default class Routes extends Component {
     const { history } = this.props
     return (
       <Router history={ history }>
-        <Route component={ App }>
+        <Route path="/" component={ App }>
           <IndexRoute component={ Index } />
           <Route path="/index" component={ Index } />
           <Route path="/about" component={ About } />
