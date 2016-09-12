@@ -21,7 +21,8 @@ const alias = {
   Scripts: path.resolve( __dirname, '..', 'src', 'scripts' ),
   Styles: path.resolve( __dirname, '..', 'src', 'stylesheets' ),
   Tmpl: path.resolve( __dirname, '..', 'src', 'templates' ),
-  Data: path.resolve( __dirname, '..', 'src', 'scripts', 'data' )
+  Data: path.resolve( __dirname, '..', 'src', 'scripts', 'data' ),
+  Mixin: path.resolve( __dirname, '..', 'src', 'scripts', 'mixin' )
 }
 
 export default alias
