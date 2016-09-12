@@ -3,8 +3,7 @@ body, html {
   position: relative;
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font: 16px/1.5 'Roboto', sans-serif;
   word-wrap: break-word;
 }
 
@@ -13,7 +12,6 @@ main {
   width: 100%;
   height: auto;
   // background: linear-gradient(to right, #57236d,#500b0b);
-  background: linear-gradient(to right, cornflowerblue,coral);
 }
 
 .html table{
@@ -22,4 +20,37 @@ main {
 
 input:invalid {
   box-shadow: none;
+}
+
+.b-container {
+  size: 100%;
+  position: relative;
+  z-index: 500;
+  &__inner {
+    size: 100%;
+    @include bb;
+    padding: 100px;
+  }
+}
+
+.b-content {
+  @include all_zero;
+  @include bb;
+  position: absolute;
+  size: 100%;
+  padding: 100px;
+  &__inner {
+    @include containerWdt;
+    @include bb;
+    color: #fff;
+    font-weight: 100;
+    padding: 25px;
+    min-height: 200px;
+    background: linear-gradient(to right, rgba(100, 149, 237, 0.5), rgba(255, 127, 80, 0.5));
+    box-shadow: 4px 4px 19px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 500;
+    margin: 0 auto;
+    border-radius: 3px;
+  }
 }

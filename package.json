@@ -122,6 +122,8 @@
     "react-flexbox-grid": "^0.9.6",
     "react-mdl": "^1.6.0",
     "react-mixin": "^3.0.5",
+    "react-motion": "^0.4.4",
+    "react-router-transition": "0.0.6",
     "react-select": "^1.0.0-beta14",
     "react-toolbox": "^1.0.1",
     "reactfire": "^1.0.0",

@@ -1,0 +1,29 @@
+@import "~Styles/patterns.scss";
+@import "~Styles/mixins.scss";
+
+.b-background {
+  size: 100%;
+  position: fixed;
+  @include all_zero;
+  &__pattern {
+    @include p-carbone-fibre;
+    opacity: 0.4;
+    size: 100%;
+    position: absolute;
+    z-index: 20;
+    @include all_zero;
+  }
+  video {
+    top: -20%;
+    height: -20%;
+    z-index: 10;
+    position: fixed;
+    min-width: 140%;
+    min-height: 140%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    // background: url(polina.jpg) no-repeat;
+    background-size: cover;
+  }
+}

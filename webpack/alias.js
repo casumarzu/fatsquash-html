@@ -21,6 +21,7 @@ const alias = {
   Scripts: path.resolve( __dirname, '..', 'src', 'scripts' ),
   Styles: path.resolve( __dirname, '..', 'src', 'stylesheets' ),
   Tmpl: path.resolve( __dirname, '..', 'src', 'templates' ),
+  File: path.resolve( __dirname, '..', 'src', 'files' ),
   Data: path.resolve( __dirname, '..', 'src', 'scripts', 'data' ),
   Mixin: path.resolve( __dirname, '..', 'src', 'scripts', 'mixin' )
 }

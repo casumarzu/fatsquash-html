@@ -10,7 +10,7 @@ const recentsIcon = <FontIcon className="material-icons">restore</FontIcon>
 const favoritesIcon = <FontIcon className="material-icons">favorite</FontIcon>
 const nearbyIcon = <IconLocationOn />
 
-export default class HeaderLayout extends Component {
+export default class Footer extends Component {
   state = { selectedIndex: 0 }
 
   select = (index) => this.setState({selectedIndex: index})

@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import {
   LinearGradient,
   RadialGradient,
-  OpacityAnimation,
   svgStyle
 } from './partials'
 
@@ -22,9 +21,7 @@ export default class Circle extends Component {
           x="40"
           y="40"
           height="40"
-          width="40">
-          <OpacityAnimation />
-        </rect>
+          width="40" />
       </svg>
     )
   }

@@ -3,7 +3,6 @@ import {paintIsoscelesTriange} from './utils'
 import {
   LinearGradient,
   RadialGradient,
-  OpacityAnimation,
   svgStyle
 } from './partials'
 
@@ -22,11 +21,7 @@ export default class Triangle extends Component {
         <defs>
           <RadialGradient />
         </defs>
-        <polygon
-          fill="url(#radial-gradient)"
-          points={points}>
-          <OpacityAnimation />
-        </polygon>
+        <polygon fill="url(#radial-gradient)" points={points} />
       </svg>
     )
   }

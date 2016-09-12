@@ -31,6 +31,8 @@ const fileLoader = (loader, lang) => {
   }
 }
 
+const videoLoader = fileLoader('file', /\.(webm|mp4)$/)
+
 const styleLoader = (loader, lang) => {
   if(NODE_ENV === 'development'){
     loader = 'style-loader' + loader;
@@ -70,7 +72,8 @@ const loaders = [
   scssLoader,
   lessLoader,
   imageLoader,
-  fontLoader
+  fontLoader,
+  videoLoader
 ];
 
 export default loaders
