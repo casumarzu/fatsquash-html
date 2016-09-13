@@ -1,0 +1,43 @@
+.b-container {
+  size: 100%;
+  position: absolute;
+  z-index: 500;
+  &__inner {
+    @include bb;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 50px;
+    position: absolute;
+  }
+}
+
+.b-content {
+  @include bb;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 80px 100px;
+  margin: 50px 0;
+  z-index: 10;
+  &__inner {
+    @include containerWdt;
+    @include bb;
+    color: #fff;
+    font-weight: 100;
+    padding: 25px;
+    min-height: 200px;
+    background: linear-gradient(to right, rgba(100, 149, 237, 0.7), rgba(255, 127, 80, 0.7));
+    box-shadow: 4px 4px 19px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 500;
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+}
+
+.b-wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto;
+}

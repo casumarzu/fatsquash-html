@@ -1,23 +1,55 @@
 @import "~Styles/mixins.scss";
 .b-header {
+  $hgt: 100px;
   @include all_zero;
+  @include bb;
   position: relative;
-  z-index: 10;
-  text-align: center;
+  z-index: 20;
+  text-align: right;
   margin: 0 auto;
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  background: rgba(51,50,62, .9);
+  size: 100% $hgt;
+  padding: 0 100px;
   &__inner {
-    @include containerWdt;
+    // @include containerWdt;
     margin: 0 auto;
   }
   a {
+    $color: #fff;
     display: inline-block;
-    margin: 10px;
-    color: #fff;
+    margin: 0 $hgt/8;
+    font: 100 30px/1.5 'Roboto', sans-serif;
+    color: $color;
+    line-height: $hgt;
+    text-decoration: none;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      margin-top: 15px;
+      top: 50%;
+      left: 0;
+      size: 100% 1px;
+      background: $color;
+      opacity: 0.01;
+      transform: scale(0.01);
+      transition: all .3s ease-in;
+    }
     &.__active {
-      text-decoration: none;
-      color: #0cd01e;
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+        transition: all .3s ease-out;
+      }
     }
   }
 }
+//
+// font-family: 'Lato', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Poiret One', cursive;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Roboto', sans-serif;

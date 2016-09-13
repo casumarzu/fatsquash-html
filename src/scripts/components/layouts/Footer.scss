@@ -1,0 +1,47 @@
+@import "~Styles/mixins.scss";
+.b-footer {
+  $hgt: 50px;
+  z-index: 10;
+  text-align: center;
+  position: fixed;
+  background: rgba(51,50,62, .7);
+  size: 100% $hgt;
+  bottom: 0;
+  &__inner {
+    @include containerWdt;
+    margin: 0 auto;
+  }
+  a {
+    $color: #fff;
+    $font-size: 15px;
+    display: inline-block;
+    margin: 0 $hgt/8;
+    font: 100 $font-size 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-style: italic;
+    color: $color;
+    line-height: $hgt;
+    text-decoration: none;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      margin-top: $font-size/2;
+      top: 50%;
+      left: 0;
+      size: 100% 1px;
+      background: $color;
+      opacity: 0.01;
+      transform: scale(0.01);
+      transition: all .3s ease-in;
+    }
+    &.__active {
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+        transition: all .3s ease-out;
+      }
+    }
+  }
+}
