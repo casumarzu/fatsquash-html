@@ -41,6 +41,7 @@ export default class DepositeCalc extends Component {
       <section className="b-deposite-calc">
         <header>
           <h2>Входные данные:</h2>
+          <hr/>
           <label>
             <p>Сумма:</p>
             <input onChange={::this.onSumChange} type="text"/>
@@ -53,10 +54,14 @@ export default class DepositeCalc extends Component {
             <p>Срок (лет)</p>
             <input onChange={::this.onTimeChange} type="text"/>
           </label>
-          <button onClick={::this.calcResult}>Показать результат!</button>
+          <br/>
+          <section>
+            <button onClick={::this.calcResult}>Показать результат!</button>
+          </section>
         </header>
         <footer>
           <h2>Результат</h2>
+          <hr/>
           <p>{result}</p>
         </footer>
 

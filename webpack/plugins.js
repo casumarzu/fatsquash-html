@@ -20,12 +20,11 @@ if(NODE_ENV === 'development') {
       template: path.join(__dirname, '..', '/src', '/templates/index.html'),
       chunks: ['common', 'vendors']
     }),
-    // new NpmInstallPlugin(),
-    new ExtractTextPlugin(),
-    new CommonsChunkPlugin('vendors', 'vendors.[hash].js'),
+    new NpmInstallPlugin(),
+    new CommonsChunkPlugin('vendors', 'vendors.js'),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProgressPlugin(function(percentage, msg) {
-      percentage = (percentage * 100) + '%'
+      percentage = `${(percentage * 100)}%`
       console.log(percentage.cyan, msg.green)
     }),
     new webpack.ProvidePlugin({
@@ -56,7 +55,6 @@ if(NODE_ENV === 'development') {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({compressor: {warnings: false}}),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
@@ -71,7 +69,8 @@ if(NODE_ENV === 'development') {
       compress:{
         warnings: true
       }
-    })
+    }),
+    new webpack.NoErrorsPlugin()
   ];
 }
 

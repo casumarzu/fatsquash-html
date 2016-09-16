@@ -17,7 +17,16 @@ let config = {
     'react-redux',
     'react-router',
     'react-router-redux',
+    'react-router-transition',
     'react-tap-event-plugin',
+    'react-addons-css-transition-group',
+    'react-addons-test-utils',
+    'react-event-listener',
+    'react-motion',
+    'react-mixin',
+    'react-raw-html',
+    'react-render-html',
+    'react-d3',
     'redux',
     'redux-devtools',
     'redux-devtools-log-monitor',
@@ -25,8 +34,7 @@ let config = {
     'lodash',
     'jquery',
     'babel-polyfill',
-    'whatwg-fetch',
-    'material-ui'
+    'whatwg-fetch'
   ],
   output: {
     path: path.join(__dirname, 'dist'),

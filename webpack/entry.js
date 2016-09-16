@@ -5,7 +5,7 @@ let preEntry
 
 if(NODE_ENV === 'development') {
   preEntry = [
-    'webpack-dev-server/client?http://localhost:' + port,
+    `webpack-dev-server/client?http://localhost:${port}`,
     'webpack/hot/only-dev-server',
     'babel-polyfill',
   ]
