@@ -5,5 +5,5 @@ export default {
   left: 0,
   zIndex: 100,
   width: '100%',
-  height: '150px'
+  height: '10%'
 }

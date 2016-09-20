@@ -7,6 +7,7 @@
   @include all_zero;
   position: absolute;
   overflow: hidden;
+  pointer-events: none;
   &__pattern {
     @include p-bg;
     opacity: 0.4;

@@ -1,7 +1,5 @@
-export Triangle from './Triangle'
-export Rectangle from './Rectangle'
-export Circle from './Circle'
+export Triangle from './figures/Triangle'
+export Rectangle from './figures/Rectangle'
+export Circle from './figures/Circle'
 
 export Corner from './Corner'
-export CornerTop from './CornerTop'
-export CornerBottom from './CornerBottom'

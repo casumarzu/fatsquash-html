@@ -1,6 +1,6 @@
 @import "~Styles/mixins.scss";
 .b-header {
-  $hgt: 100px;
+  $hgt: 60px;
   @include all_zero;
   @include bb;
   position: relative;
@@ -20,7 +20,7 @@
     display: inline-block;
     margin: 0 $hgt/8;
     font: 100 18px/1.5 'Lato', sans-serif;
-    color: $color;
+    // color: $color;
     line-height: $hgt;
     text-decoration: none;
     position: relative;

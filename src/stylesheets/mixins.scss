@@ -1,3 +1,11 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin all_zero {
   top: 0;
   right: 0;
@@ -8,7 +16,7 @@
 @mixin containerWdt {
   // min-width: 600px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
 }
 
 @mixin bb {

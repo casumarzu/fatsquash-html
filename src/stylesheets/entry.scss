@@ -5,14 +5,15 @@ body, html {
   margin: 0;
   font: 16px/1.5 'Roboto', sans-serif;
   word-wrap: break-word;
-  min-width: 600px;
+  // min-width: 600px;
 }
 
 main {
   min-height: 100%;
   width: 100%;
   height: auto;
-  // background: linear-gradient(to right, #57236d,#500b0b);
+  background: linear-gradient(to right, #57236d,#500b0b);
+  @include clearfix;
 }
 
 .html table{

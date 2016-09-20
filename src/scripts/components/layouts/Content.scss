@@ -1,0 +1,72 @@
+@import "~Styles/mixins.scss";
+
+.b-wrapper {
+  position: relative;
+  size: 100%;
+}
+
+.b-container {
+  size: 100% auto;
+  min-height: 100%;
+  position: relative;
+  z-index: 50;
+  &__inner {
+    @include bb;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 50px;
+    position: relative;
+  }
+}
+
+.b-content {
+  @include bb;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding: 80px 100px;
+  // background: linear-gradient(to right, rgba(250,255,250,1), rgba(155,250,255,1));
+  &__inner {
+    @include containerWdt;
+    @include bb;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 100;
+    padding: 25px;
+    min-height: 200px;
+    box-shadow: 4px 4px 19px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 500;
+    border-radius: 3px;
+    // background: linear-gradient(to right, rgba(100, 149, 237, 0.7), rgba(255, 127, 80, 0.7));
+    background: linear-gradient(to right, rgba(5, 0, 5, 0.7), rgba(0, 5, 0, 0.7));
+  }
+}
+
+.b-bg {
+  size: 100%;
+  position: absolute;
+  overflow: hidden;
+  @include all_zero;
+  img {
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1000px) {
+  .b-content {
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .b-content {
+    padding: 20px;
+  }
+}
