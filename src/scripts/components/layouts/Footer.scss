@@ -3,10 +3,10 @@
   $hgt: 50px;
   z-index: 10;
   text-align: center;
-  position: fixed;
+  position: relative;
   background: rgba(51,50,62, .7);
   size: 100% $hgt;
-  bottom: 0;
+  // bottom: 0;
   &__inner {
     @include containerWdt;
     margin: 0 auto;

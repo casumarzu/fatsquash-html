@@ -41,6 +41,7 @@
     z-index: 500;
     border-radius: 3px;
     // background: linear-gradient(to right, rgba(100, 149, 237, 0.7), rgba(255, 127, 80, 0.7));
+    background: #050005;
     background: linear-gradient(to right, rgba(5, 0, 5, 0.7), rgba(0, 5, 0, 0.7));
   }
 }
@@ -65,7 +66,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .b-content {
     padding: 20px;
   }

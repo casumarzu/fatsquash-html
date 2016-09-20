@@ -1,4 +1,8 @@
 import React, { Component, PropTypes } from 'react'
+import Background from 'Components/layouts/Background'
+import './Hero.scss'
+import video from 'File/video-moscow.mp4'
+
 import Content from './layouts/Content'
 import {Grid, Col} from 'Components/Grid'
 
@@ -8,20 +12,33 @@ import {lorem} from 'Data'
 export default class Hero extends Component {
   render() {
     return (
-      <Content>
-        <h1>Hero</h1>
-        <Grid>
-          <Col grid={12} size={4}>
-            <img src={img}/>
-          </Col>
-          <Col grid={12} size={8}>
-            <p>{lorem}</p>
-            <p>{lorem}</p>
-            <p>{lorem}</p>
-            <p>{lorem}</p>
-          </Col>
-        </Grid>
-      </Content>
+      <div className="b-hero">
+        <Background src={video} />
+        <Content>
+          <h1>Hero</h1>
+          <Grid>
+            <Col grid={3} size={1}>
+              <h3>Hello!</h3>
+              <p>{lorem}</p>
+              <hr/>
+              <p>{lorem}</p>
+            </Col>
+            <Col grid={3} size={1}>
+              <h3>Hello!</h3>
+              <p>{lorem}</p>
+              <hr/>
+              <p>{lorem}</p>
+            </Col>
+            <Col grid={3} size={1}>
+              <h3>Hello!</h3>
+              <p>{lorem}</p>
+              <hr/>
+              <p>{lorem}</p>
+            </Col>
+          </Grid>
+        </Content>
+      </div>
+
     )
   }
 }

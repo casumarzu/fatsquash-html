@@ -1,7 +1,16 @@
-h1, h2, h3, h4, h5, h6 {
+// font-family: 'Lato', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Poiret One', cursive;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+$headers: h1, h2, h3, h4, h5, h6;
+
+#{$headers} {
   line-height: 1;
   margin: 0;
-  font: 600 center 'Poiret One', sans-serif;
+  text: 600 center 'Poiret One', sans-serif;
 }
 
 @mixin headerSizes($size) {
@@ -9,33 +18,16 @@ h1, h2, h3, h4, h5, h6 {
   padding: $size/4 0;
 }
 
-h1 {
-  @include headerSizes(45px);
-}
-
-h2 {
-  @include headerSizes(40px);
-}
-
-h3 {
-  @include headerSizes(35px);
-}
-
-h4 {
-  @include headerSizes(30px);
-}
-
-h5 {
-  @include headerSizes(25px);
-}
-
-h6 {
-  @include headerSizes(20px);
+$i: 1;
+@each $h in $headers {
+  #{$h} {
+    @include headerSizes(50px - $i * 5);
+  }
+  $i: $i + 1;
 }
 
 p {
   font-size: 16px;
-  // text-indent: 16px;
   padding: 10px 0;
   font-family: 'Lato', sans-serif;
   &:first-child {
@@ -47,11 +39,11 @@ p {
 }
 
 a {
-  color: blue;
+  color: #fff;
   &:visited {
-    color: green;
+    color: #fff;
   }
   &:active {
-    color: red;
+    color: #fff;
   }
 }

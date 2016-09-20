@@ -20,9 +20,9 @@ export default class App extends Component {
 
     return (
       <section className="b-wrapper">
-        {/*<Header/>*/}
+        <Header/>
         {this.props.children}
-        {/*<Footer/>*/}
+        <Footer/>
         {DevToolsNode}
       </section>
     )

@@ -1,4 +1,5 @@
 @import "~Styles/mixins.scss";
+
 .b-header {
   $hgt: 60px;
   @include all_zero;
@@ -11,8 +12,9 @@
   background: linear-gradient(to right, rgba(5, 0, 5, 0.7), rgba(0, 5, 0, 0.7));
   size: 100% $hgt;
   padding: 0 100px;
+  transition: all .5s ease;
   &__inner {
-    // @include containerWdt;
+    @include containerWdt;
     margin: 0 auto;
   }
   a {
@@ -46,10 +48,109 @@
     }
   }
 }
-//
-// font-family: 'Lato', sans-serif;
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Oswald', sans-serif;
-// font-family: 'Poiret One', cursive;
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Roboto', sans-serif;
+
+.b-sandwich {
+  display: none;
+  size: 50px;
+  position: relative;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  &__active {
+    .b-sandwich__stripe {
+      &__1 {
+        transform: rotate(45deg) translateX(13px);
+      }
+      &__2 {
+        opacity: 0;
+      }
+      &__3 {
+        transform: rotate(-45deg) translateX(13px);
+      }
+    }
+  }
+  &__stripe {
+    $stripe-hgt: 4px;
+    &__1, &__2, &__3 {
+      background: #fff;
+      size: 100% $stripe-hgt;
+      position: absolute;
+      left: 0;
+    }
+    &__1 {
+      top: 50%;
+      margin-top: -$stripe-hgt * 3;
+      transition: all .3s ease;
+    }
+    &__2 {
+      top: 50%;
+      margin-top: -$stripe-hgt/2;
+      transition: all .3s ease;
+    }
+    &__3 {
+      top: 50%;
+      margin-top: $stripe-hgt * 2;
+      transition: all .3s ease;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .b-header {
+    $hgt: 30px;
+    size: 100% $hgt;
+    padding: 0 50px;
+    a {
+      font: 100 12px/1.5 'Lato', sans-serif;
+      line-height: $hgt;
+      margin: 0 $hgt/8;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .b-header {
+    position: fixed;
+    $hgt: 50px;
+    size: 100% $hgt;
+    padding: 0 20px;
+    z-index: 600;
+    background: #000;
+    .b-sandwich {
+      display: block;
+    }
+    &__inner {
+      position: fixed;
+      top: $hgt;
+      left: 0;
+      size: 100%;
+      background: #000;
+      transition: all .5s ease;
+      transform: translateX(120%);
+    }
+    &__active {
+      .b-header__inner {
+        transform: translateX(0);
+      }
+    }
+    a {
+      cursor: pointer;
+      text-align: left;
+      font: 100 25px/1.5 'Lato', sans-serif;
+      line-height: $hgt;
+      margin: 0 $hgt/8;
+      display: block;
+      size: 100% $hgt;
+      box-sizing: border-box;
+      padding: 0 20px;
+      &.__active, &:hover {
+        background: #fff;
+        color: #000;
+        cursor: default;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
