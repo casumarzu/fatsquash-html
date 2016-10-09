@@ -1,32 +1,30 @@
-@import "~Styles/patterns.scss";
-@import "~Styles/mixins.scss";
+@import "patterns.css";
+@import "mixins.css";
 
 .b-background {
-  size: 100%;
-  position: fixed;
   @include all_zero;
+  size: 100%;
   position: absolute;
   overflow: hidden;
   pointer-events: none;
+
   &__pattern {
     @include p-bg;
+    @include all_zero;
     opacity: 0.4;
     size: 100%;
     position: absolute;
     z-index: 20;
-    @include all_zero;
   }
+
   video {
     top: -20%;
-    // height: -20%;
     z-index: 10;
     position: absolute;
     min-width: 140%;
     min-height: 140%;
     width: auto;
     height: auto;
-    // z-index: -100;
-    // background: url(polina.jpg) no-repeat;
     background-size: cover;
   }
 }

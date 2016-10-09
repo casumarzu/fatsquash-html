@@ -1,16 +1,18 @@
-@import "~Styles/mixins.scss";
+@import "mixins.css";
+
 .b-footer {
   $hgt: 50px;
   z-index: 10;
   text-align: center;
   position: relative;
-  background: rgba(51,50,62, .7);
+  background: rgba(51,50,62, 0.7);
   size: 100% $hgt;
-  // bottom: 0;
+
   &__inner {
     @include containerWdt;
     margin: 0 auto;
   }
+
   a {
     $color: #fff;
     $font-size: 15px;
@@ -23,7 +25,8 @@
     line-height: $hgt;
     text-decoration: none;
     position: relative;
-    &:after {
+
+    &::after {
       content: '';
       display: block;
       position: absolute;
@@ -34,13 +37,14 @@
       background: $color;
       opacity: 0.01;
       transform: scale(0.01);
-      transition: all .3s ease-in;
+      transition: all 0.3s ease-in;
     }
-    &.__active {
-      &:after {
+
+    &.__active{
+      &::after {
         opacity: 1;
         transform: scale(1);
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
       }
     }
   }

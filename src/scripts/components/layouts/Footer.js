@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Router, Route, Link, browserHistory } from 'react-router'
-import './Footer.scss'
+import './Footer.css'
 
 export default class Header extends Component {
   constructor(props) {

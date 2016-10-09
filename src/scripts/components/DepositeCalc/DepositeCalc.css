@@ -1,4 +1,4 @@
-@import "~Styles/patterns.scss";
+@import "patterns.css";
 .b-deposite-calc {
   $c-1: #211c1c;
   $c-2: #fff;

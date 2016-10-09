@@ -1,21 +1,19 @@
 import path from 'path'
+import config from '../config'
+const {PORT} = config
 const NODE_ENV = process.env.NODE_ENV
-const port = 8080
-let preEntry
+
+let preEntry = [ 'babel-polyfill' ]
 
 if(NODE_ENV === 'development') {
   preEntry = [
-    `webpack-dev-server/client?http://localhost:${port}`,
+    `webpack-dev-server/client?http://localhost:${PORT}`,
     'webpack/hot/only-dev-server',
-    'babel-polyfill',
-  ]
-}else if(NODE_ENV === 'production') {
-  preEntry = [
-    'babel-polyfill'
+    ...preEntry
   ]
 }
 
-var entry = {
+const entry = {
   common: preEntry.concat([path.join(__dirname, '..', '/src/scripts', 'index.js')]),
   // alpha: preEntry.concat([path.join(__dirname, '..', '/src/scripts', 'alpha.js')]),
   // beta: preEntry.concat([path.join(__dirname, '..', '/src/scripts', 'beta.js')])

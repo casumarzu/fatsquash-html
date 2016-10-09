@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import './Background.scss'
+import './Background.css'
 
 
 export default class Background extends Component {

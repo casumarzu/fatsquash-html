@@ -7,7 +7,7 @@ const popConfig = { stiffness: 320, damping: 45 }
 import 'Scripts/config'
 import Header from 'Components/layouts/Header'
 import Footer from 'Components/layouts/Footer'
-import 'Styles/index.scss'
+import 'Styles/index.css'
 
 export default class App extends Component {
   componentWillMount() {}

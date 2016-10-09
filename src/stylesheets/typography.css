@@ -1,26 +1,28 @@
-// font-family: 'Lato', sans-serif;
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Oswald', sans-serif;
-// font-family: 'Poiret One', cursive;
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Roboto', sans-serif;
-
 $headers: h1, h2, h3, h4, h5, h6;
 
-#{$headers} {
+$($headers) {
   line-height: 1;
   margin: 0;
-  text: 600 center 'Poiret One', sans-serif;
+  text: 600 left 'Poiret One', sans-serif;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
-@mixin headerSizes($size) {
+@define-mixin headerSizes($size) {
   font-size: $size;
   padding: $size/4 0;
 }
 
 $i: 1;
+
 @each $h in $headers {
-  #{$h} {
+  $($h) {
     @include headerSizes(50px - $i * 5);
   }
   $i: $i + 1;
@@ -30,9 +32,11 @@ p {
   font-size: 16px;
   padding: 10px 0;
   font-family: 'Lato', sans-serif;
+
   &:first-child {
     padding-top: 0;
   }
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -40,9 +44,11 @@ p {
 
 a {
   color: #fff;
+
   &:visited {
     color: #fff;
   }
+
   &:active {
     color: #fff;
   }

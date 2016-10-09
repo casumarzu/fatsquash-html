@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import './DepositeCalc.scss'
+import './DepositeCalc.css'
 import {Calc} from './utils'
 
 export default class DepositeCalc extends Component {

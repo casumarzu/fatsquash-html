@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import _ from 'lodash'
-import './Header.scss'
+import './Header.css'
 
 export default class Header extends Component {
   constructor(props) {

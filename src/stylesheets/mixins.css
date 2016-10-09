@@ -1,0 +1,27 @@
+@define-mixin all_zero {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@define-mixin containerWdt {
+  width: 100%;
+  max-width: 1400px;
+}
+
+@define-mixin bb {
+  box-sizing: border-box;
+}
+
+@define-mixin image-shadow {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( 180deg, rgba(9,9,9,0.6) 0, rgb(9,9,9) 30%, rgb(9,9,9) 50%, rgba(9,9,9,0.6) );
+  }
+}

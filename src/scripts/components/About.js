@@ -11,13 +11,13 @@ export default class About extends Component {
       <Content>
         <h1>About</h1>
         <Grid>
-          <Col grid={3} size={2}>
+          <Col grid={3} size={1}>
             <img src={img}/>
           </Col>
-          <Col grid={3} size={1}>
+          <Col grid={3} size={2}>
+            <h4>Lalala</h4>
             <p>{lorem}</p>
-            <p>{lorem}</p>
-            <p>{lorem}</p>
+            <hr/>
             <p>{lorem}</p>
           </Col>
         </Grid>

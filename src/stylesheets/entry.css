@@ -1,24 +1,16 @@
-body, html {
+body,
+html {
   size: 100%;
   position: relative;
   padding: 0;
   margin: 0;
   font: 16px/1.5 'Roboto', sans-serif;
   word-wrap: break-word;
-  // min-width: 600px;
 }
 
 main {
   min-height: 100%;
   width: 100%;
   height: auto;
-  @include clearfix;
-}
-
-.html table{
-  size: auto !important;
-}
-
-input:invalid {
-  box-shadow: none;
+  clear: fix;
 }

@@ -23,14 +23,15 @@ let config = {
     'react-addons-test-utils',
     'react-event-listener',
     'react-motion',
+    'react-smooth',
     'react-mixin',
     'react-raw-html',
     'react-render-html',
-    'react-d3',
     'redux',
     'redux-devtools',
     'redux-devtools-log-monitor',
     'redux-devtools-dock-monitor',
+    'recharts',
     'lodash',
     'jquery',
     'babel-polyfill',
@@ -43,16 +44,22 @@ let config = {
   },
   resolve: {
     extensions: ['', '.js', '.css', '.scss', '.less', '.styl', '.json', '.eot'],
-    alias
+    alias,
+    root: path.resolve(__dirname, 'src'),
+    modulesDirectories: ["node_modules"]
   },
   plugins,
   module: {
     preLoaders: [
-      {test: /\.js$/, loaders: ['eslint'], include: [ path.resolve(__dirname, './src')]}
+      {
+        test: /\.js$/,
+        loaders: ['eslint'],
+        include: [ path.resolve(__dirname, './src')]
+      }
     ],
     loaders: loaders
   },
-  postcss() { return postcss }
+  postcss(webpack) { return postcss(webpack) },
 };
 
 if(NODE_ENV === 'development') {

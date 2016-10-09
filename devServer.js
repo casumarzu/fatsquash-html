@@ -1,7 +1,8 @@
 import webpack from 'webpack'
-import config from './webpack.config.babel'
+import webpackConfig from './webpack.config.babel'
 import WebpackDevServer from 'webpack-dev-server'
-const port = 8080
+import config from './config'
+const {PORT} = config
 
 function proxyConfig(url) {
   return {
@@ -21,7 +22,7 @@ function proxyConfig(url) {
   }
 }
 
-const server = new WebpackDevServer(webpack(config), {
+const server = new WebpackDevServer(webpack(webpackConfig), {
   contentBase: './src',
   hot: true,
   quiet: false,
@@ -36,10 +37,10 @@ const server = new WebpackDevServer(webpack(config), {
   }
 });
 
-server.listen(port, 'localhost', function (err, result) {
+server.listen(PORT, 'localhost', function (err, result) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:' + port);
+  console.log('Listening at localhost:' + PORT);
 });

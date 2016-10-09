@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Background from 'Components/layouts/Background'
-import './Hero.scss'
+import './Hero.css'
 import video from 'File/video-moscow.mp4'
 
 import Content from './layouts/Content'
