@@ -29,3 +29,5 @@ browserHistory.listen( location => {
   document.body.scrollTop = 0
   return false
 } )
+
+import shit from './shit'

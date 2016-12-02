@@ -4,6 +4,7 @@ import postcss from 'postcss'
 
 // Use Future CSS, Today
 import cssnext from 'postcss-cssnext'
+import rucksack from 'rucksack-css'
 const futureCss = [
   cssnext({
     browsers: 'last 2 versions',
@@ -13,6 +14,9 @@ const futureCss = [
         remove: false
       }
     }
+  }),
+  rucksack({
+    fallbacks: true
   })
 ]
 
@@ -77,11 +81,9 @@ const syntaxes = [
 ]
 
 // Other
-import rucksack from 'rucksack-css'
 import cssnano from 'cssnano'
 import postcssImport from 'postcss-import'
 const others = [
-  rucksack,
   cssnano
 ]
 
@@ -89,8 +91,6 @@ const others = [
 import use from 'postcss-use'
 import modules from 'postcss-modules'
 import reactModules from 'react-css-modules'
-import autoreset from 'postcss-autoreset'
-import initial from 'postcss-initial'
 // import cqProlyfill from 'cq-prolyfill'
 const globalProblsems = [ // TODO
   // use({
@@ -98,8 +98,6 @@ const globalProblsems = [ // TODO
   // }),
   // modules,
   // reactModules,
-  // autoreset,
-  // initial,
   // cqProlyfill
 ]
 
